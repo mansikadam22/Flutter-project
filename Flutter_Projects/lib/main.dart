@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import'package:flutter_projects/Statefull_widget/hideshow_image.dart';
+import'./Scrolling/Horizontal.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
 
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: imageonoff()
+      home: MyApp()
     );
   }
 }
