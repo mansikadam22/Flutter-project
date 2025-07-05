@@ -1,34 +1,63 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MyApp());
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
+class Horizontal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    const title = 'Horizontal List';
-
-    return MaterialApp(
-      title: title,
-      home: Scaffold(
-        appBar: AppBar(title: const Text(title)),
-        body: Container(
-          margin: const EdgeInsets.symmetric(vertical: 20),
-          height: 200,
-          child: ListView(
-            // This next line does the trick.
-            scrollDirection: Axis.horizontal,
-            children: <Widget>[
-              Container(width: 160, color: Colors.red),
-              Container(width: 160, color: Colors.blue),
-              Container(width: 160, color: Colors.green),
-              Container(width: 160, color: Colors.yellow),
-              Container(width: 160, color: Colors.orange),
-            ],
-          ),
+    return Scaffold(
+      // App bar with a title
+      appBar: AppBar(
+        backgroundColor: Color(0xFF52AED6),
+        title: const Text(
+          "Horizontal Scrolling Page",
+          style: TextStyle(color: Colors.white),
         ),
       ),
+
+      body: Center(
+         child: Column(
+        children: [
+          SizedBox(height: 100),
+          SizedBox(
+            height: 100, // Set fixed height for horizontal ListView
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: <Widget>[
+                Container(width: 150, color: Colors.red,
+                  child: Center(
+                  child: Text("Mansi",
+                    style: TextStyle(fontWeight: FontWeight.bold,),)
+                ),
+                ),
+                Container(width: 150, color: Colors.blue,
+                  child: Center(
+                    child: Text("Mansi",
+                      style: TextStyle(fontWeight: FontWeight.bold,),)
+                ),
+                ),
+                Container(width: 150, color: Colors.green,
+                  child: Center(
+                    child: Text("Mansi",
+                      style: TextStyle(fontWeight: FontWeight.bold,),)
+                ),
+                ),
+                Container(width: 150, color: Colors.yellow,
+                  child: Center(
+                    child: Text("Mansi",
+                    style: TextStyle(fontWeight: FontWeight.bold,),)
+                ),
+                ),
+                Container(width: 150, color: Colors.orange,
+                  child: Center(
+                    child: Text("Mansi",
+                      style: TextStyle(fontWeight: FontWeight.bold,),)
+                ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    ),
     );
   }
 }
